@@ -3,7 +3,7 @@
 !.env.example
 __pycache__/
 .DS_Store
-node_modules/
+node_modules
 private/
 private-eval/
 *.inspect.ndjson
