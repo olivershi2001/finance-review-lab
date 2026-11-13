@@ -2,7 +2,7 @@
 
 Can AI identify and repair financial model errors without breaking correct work?
 
-**Development benchmark toolkit:** four original public cases, conservative grading, offline run capture and a results explorer. The example results are simulated software fixtures. Real model trials and human scoring remain pending.
+**Development benchmark toolkit:** four original public cases, conservative grading, offline run capture and a results explorer. The published example results are simulated software fixtures. One real development smoke trial has been captured locally; human scoring and comparative trials remain pending.
 
 The research question is whether self-review or independent AI review improves financial-model auditing, and when review causes a correct answer to become wrong.
 
@@ -70,6 +70,8 @@ The runner freezes input hashes, preserves raw answers and grade history, and li
 Read [the run guide](docs/run-guide.md), [the benchmark specification](docs/benchmark-spec.md), and [the progress log](docs/progress.md). The planned 20 private evaluation cases do not exist yet.
 
 The [pilot planner](docs/pilot-campaign.md) freezes a balanced queue of 24 development trials from two actual configurations and three repetitions per case. The [human-review workflow](docs/human-review.md) produces metadata-blinded review packets bound to exact responses and reference manifests. Neither workflow supplies model answers or human judgments.
+
+Read the [first development smoke-test record](docs/development-smoke-trial.md) for the trial's scope and the grader defect it exposed. It is a workflow check, not a model ranking.
 
 ## Reproduction and limits
 

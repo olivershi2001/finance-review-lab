@@ -79,6 +79,42 @@ class RunWorkflowTests(unittest.TestCase):
         (self.root/'references/case-001/manifest.json').write_text('{"errors":[],"changed":true}')
         self.assertEqual(self.cli('grade','r1','analyst'),2)
 
+    def test_explicit_regrade_preserves_original_and_pending_state(self):
+        self.init();self.assertEqual(self.capture('analyst'),0)
+        self.assertEqual(self.cli('grade','r1','analyst','--regrade'),2)
+        self.assertEqual(self.cli('grade','r1','analyst'),0)
+        folder=self.root/'runs/r1/analyst'
+        original=(folder/'grade_history/0001.json').read_bytes()
+        self.assertEqual(self.cli('grade','r1','analyst','--regrade'),0)
+        self.assertEqual((folder/'grade_history/0001.json').read_bytes(),original)
+        current=json.loads((folder/'grade.json').read_text())
+        self.assertEqual(current['regraded_from_revision'],1)
+        self.assertIsNone(current['grade']['successful_audit'])
+        self.assertEqual(self.cli('report',self.root/'regraded-report.json'),0)
+
+    def test_regrade_retains_previous_adjudication(self):
+        self.init();self.assertEqual(self.capture('analyst'),0)
+        adjud=self.root/'simulated-human.json'
+        adjud.write_text('{"restraint":{"verdict":true,"evidence":"SIMULATED TEST EVIDENCE"}}')
+        self.assertEqual(self.cli('grade','r1','analyst','--adjudication',adjud),0)
+        self.assertEqual(self.cli('grade','r1','analyst','--regrade'),0)
+        current=json.loads((self.root/'runs/r1/analyst/grade.json').read_text())
+        self.assertEqual(current['adjudication'],json.loads(adjud.read_text()))
+        self.assertTrue(current['grade']['successful_audit'])
+
+    def test_older_grader_snapshot_requires_explicit_regrade_for_export(self):
+        self.init();self.assertEqual(self.capture('analyst'),0)
+        self.assertEqual(self.cli('grade','r1','analyst'),0)
+        folder=self.root/'runs/r1/analyst'
+        snapshot=json.loads((folder/'grade.json').read_text())
+        snapshot['grade']['grader_version']='old-test-version'
+        for path in (folder/'grade.json',folder/'grade_history/0001.json'):
+            path.write_text(json.dumps(snapshot))
+        self.assertEqual(self.cli('report',self.root/'old-report.json'),2)
+        self.assertEqual(self.cli('grade','r1','analyst','--regrade'),0)
+        self.assertEqual(self.cli('report',self.root/'new-report.json'),0)
+        self.assertEqual(json.loads((folder/'grade_history/0001.json').read_text())['grade']['grader_version'],'old-test-version')
+
     def test_review_packet_binding_enforced_by_cli_and_report(self):
         from frl.review import make_packet
         self.init();self.assertEqual(self.capture('analyst'),0)

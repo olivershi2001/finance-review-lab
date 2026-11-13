@@ -1,6 +1,16 @@
 # Release candidate notes
 
-This is a local development release candidate, not a published benchmark or model leaderboard. No deployment or social post is included.
+The development toolkit is published on GitHub. It contains no model leaderboard. No hosted website deployment or social post is included.
+
+## v0.2.1 additions
+
+Published the source and verified the initial GitHub Actions run. Added contributor guidance and a workflow diagram. One real development smoke trial is captured locally, with no completed human verdicts or capability scores published.
+
+The trial exposed a grader defect: downstream references with valid quoted sheet names were treated as different locations. Grader 0.2.1 normalizes quoted names, escaped apostrophes, cell anchors and case while retaining the original response. Different sheets, workbooks, cells and ranges still fail the location comparison. This patch changes propagation metrics, not the reference workbooks or successful-audit definition.
+
+`frl grade RUN STAGE --regrade` explicitly creates a new grading revision with the current grader, retains earlier revisions and carries forward any existing adjudication. Regrading cannot manufacture pending human decisions. The first smoke trial retains both its 0.2.0 and 0.2.1 grades. Software coverage now includes 77 Python tests.
+
+Workbook case versions remain 0.2.0; the software version is 0.2.1. Existing consumers should preserve old reports and record the grader change. Report export with the current grader requires an explicit regrade of each captured completed stage that has an older grade, so an export does not mix replay assumptions across versions. Quoted-address submissions may have changed propagation metrics.
 
 ## v0.2.0 additions
 

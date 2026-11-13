@@ -2,7 +2,7 @@
 
 ## Status
 
-Four public synthetic development cases have been built. No blind model trials have been run. The offline runner and grader are documented in run-guide.md. The legacy numerical scaffold is excluded from this release.
+Four public synthetic development cases have been built. One real, access-restricted development smoke trial was captured on November 12, 2026; it remains provisional pending human review. The comparative pilot has not run. See development-smoke-trial.md for scope and limits. The offline runner and grader are documented in run-guide.md. The legacy numerical scaffold is excluded from this release.
 
 ## Data provenance and finance conventions
 

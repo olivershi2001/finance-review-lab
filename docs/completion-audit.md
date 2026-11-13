@@ -1,6 +1,6 @@
 # Release candidate completion audit
 
-Audit scope: the autonomous build instructions for a local development release candidate. Publishing, paid services and real hidden-test scores are outside this build. This record reports completed artifacts and explicit verification limits, not future benchmark performance.
+Historical audit scope: the November 6 autonomous build for a local v0.2.0 development release candidate. Its original build excluded publishing, paid services and real hidden-test scores. The source was subsequently published on November 12; see github-publication.md and development-smoke-trial.md for later work. Rows below retain the original build scope.
 
 | Requirement | Current evidence | Result |
 | --- | --- | --- |
@@ -24,7 +24,7 @@ Audit scope: the autonomous build instructions for a local development release c
 
 ## Commands and coverage
 
-Current v0.2.0 test counts and fresh-archive checks are recorded in release-verification-v0.2.0.json beside the archive. Coverage includes independent saved-workbook verification, blind-package checks, frozen campaigns, bound human review packets and native evidence hashes. Viewer DOM tests use synthetic inputs. GitHub CI is configured but has not run remotely.
+The original v0.2.0 test counts and fresh-archive checks are recorded in release-verification-v0.2.0.json beside that archive. Coverage includes independent saved-workbook verification, blind-package checks, frozen campaigns, bound human review packets and native evidence hashes. Viewer DOM tests use synthetic inputs. The later GitHub CI verification is recorded separately in github-publication.md.
 
 `python3 verify_suite.py`: four cases passed; original case has 50 independent forecast values, additional cases have 100. Further assertions verify planted impacts, propagation, reconciliation, style/input parity, hashes, formula changes and absence of cached Excel errors/cycles. A finite check is not a claim of universal correctness.
 

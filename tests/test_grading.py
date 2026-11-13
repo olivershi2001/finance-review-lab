@@ -97,6 +97,24 @@ class GradingTests(unittest.TestCase):
         g=grade_submission(r,manifest(),human())
         self.assertTrue(g['successful_audit']);self.assertEqual(g['metrics']['propagation_accuracy']['numerator'],0)
 
+    def test_downstream_equivalent_excel_address_spellings(self):
+        for address in ("'Cash Flow'!$I$45", 'cash flow!i45', '$I45'):
+            with self.subTest(address=address):
+                r=response();r['findings'][0]['downstream_cells']=[address]
+                self.assertEqual(grade_submission(r,manifest())['metrics']['propagation_accuracy']['numerator'],1)
+
+    def test_downstream_invalid_or_different_locations_still_fail(self):
+        for address in ("'Other Sheet'!I45", "'Cash Flow'!I46", '[other.xlsx]Cash Flow!I45',
+                        "'Cash Flow'!I45:I46", "'Cash Flow'!$$I45"):
+            with self.subTest(address=address):
+                r=response();r['findings'][0]['downstream_cells']=[address]
+                self.assertEqual(grade_submission(r,manifest())['metrics']['propagation_accuracy']['numerator'],0)
+
+    def test_downstream_escaped_apostrophe_in_sheet_name(self):
+        m=manifest();m['errors'][0]['sheet']="Owner's Cash";m['errors'][0]['downstream_cells']=["'Owner''s Cash'!I45"]
+        r=response();r['findings'][0]['sheet']="Owner's Cash";r['findings'][0]['downstream_cells']=["'Owner''s Cash'!$i$45"]
+        self.assertEqual(grade_submission(r,m)['metrics']['propagation_accuracy']['numerator'],1)
+
     def test_malformed_refused(self):
         for r in (None,[],{}, {'findings':[None]}, {'findings':[{}]}, {'findings':[],'status':'refused'}):
             with self.subTest(r=r):self.assertEqual(grade_submission(r,manifest())['status'],'invalid')

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-06T17:49:38.723609+00:00",
+  "generated_at": "2026-11-13T00:19:03.560809+00:00",
   "notice": "SIMULATED FIXTURES ONLY. No model calls or real human adjudications. Demonstrates successful, failed, helpful and harmful transitions.",
   "runs": [
     {
@@ -25,14 +25,14 @@
       },
       "dataset_hash": "20c869f33fb61a0bbcc96a5a1b92447a985032c3fb3ca0fecd170df5e3851559",
       "manifest_sha256": "a91a2dc1a3b9e5b730756ce04aef78e61fec55dd8f689e80efd688937eefc0d3",
-      "created_at": "2026-11-06T17:49:38.700030+00:00",
+      "created_at": "2026-11-13T00:19:03.540655+00:00",
       "stages": {
         "analyst": {
           "stage": "analyst",
           "status": "completed",
           "raw_sha256": "116e685aea031b5e13ed386ec8f585d166dcd9d163f8e881f8f73e9ccf893c77",
           "parents": {},
-          "captured_at": "2026-11-06T17:49:38.701402+00:00",
+          "captured_at": "2026-11-13T00:19:03.541854+00:00",
           "operator_note": "Constructed fixture, not measured work",
           "elapsed_seconds": null,
           "interactions": null,
@@ -44,7 +44,7 @@
           },
           "grading": {
             "grade": {
-              "grader_version": "0.2.0",
+              "grader_version": "0.2.1",
               "case_id": "case-001",
               "status": "adjudicated",
               "successful_audit": false,
@@ -119,7 +119,7 @@
           "parents": {
             "analyst": "116e685aea031b5e13ed386ec8f585d166dcd9d163f8e881f8f73e9ccf893c77"
           },
-          "captured_at": "2026-11-06T17:49:38.706280+00:00",
+          "captured_at": "2026-11-13T00:19:03.545115+00:00",
           "operator_note": "Constructed fixture, not measured work",
           "elapsed_seconds": null,
           "interactions": null,
@@ -149,7 +149,7 @@
           },
           "grading": {
             "grade": {
-              "grader_version": "0.2.0",
+              "grader_version": "0.2.1",
               "case_id": "case-001",
               "status": "adjudicated",
               "successful_audit": true,
@@ -280,14 +280,14 @@
       },
       "dataset_hash": "e55cd22df4fcfc4926d3a454c5c60cd7f8e02d8f5f2f1bf313216a0bb64b1485",
       "manifest_sha256": "090dd19cf9c6d5fff20e230b7466bdad0dc2eb71b66bf23d3a5e414d991d940b",
-      "created_at": "2026-11-06T17:49:38.708562+00:00",
+      "created_at": "2026-11-13T00:19:03.547203+00:00",
       "stages": {
         "analyst": {
           "stage": "analyst",
           "status": "completed",
           "raw_sha256": "e6d0eb99a3419aad5d99ad1a59dcd7d20adb893569e2aa73379d4cd424e5d3f2",
           "parents": {},
-          "captured_at": "2026-11-06T17:49:38.709677+00:00",
+          "captured_at": "2026-11-13T00:19:03.548283+00:00",
           "operator_note": "Constructed fixture, not measured work",
           "elapsed_seconds": null,
           "interactions": null,
@@ -316,7 +316,7 @@
           },
           "grading": {
             "grade": {
-              "grader_version": "0.2.0",
+              "grader_version": "0.2.1",
               "case_id": "dev-002",
               "status": "adjudicated",
               "successful_audit": true,
@@ -421,7 +421,7 @@
           "parents": {
             "analyst": "e6d0eb99a3419aad5d99ad1a59dcd7d20adb893569e2aa73379d4cd424e5d3f2"
           },
-          "captured_at": "2026-11-06T17:49:38.711451+00:00",
+          "captured_at": "2026-11-13T00:19:03.550372+00:00",
           "operator_note": "Constructed fixture, not measured work",
           "elapsed_seconds": null,
           "interactions": null,
@@ -440,7 +440,7 @@
             "analyst": "e6d0eb99a3419aad5d99ad1a59dcd7d20adb893569e2aa73379d4cd424e5d3f2",
             "review": "07ad53cdcc6925d5525be4df8b69babc40ac07263c0c7dd910f1ff8b3b32997e"
           },
-          "captured_at": "2026-11-06T17:49:38.712290+00:00",
+          "captured_at": "2026-11-13T00:19:03.551396+00:00",
           "operator_note": "Constructed fixture, not measured work",
           "elapsed_seconds": null,
           "interactions": null,
@@ -469,7 +469,7 @@
           },
           "grading": {
             "grade": {
-              "grader_version": "0.2.0",
+              "grader_version": "0.2.1",
               "case_id": "dev-002",
               "status": "adjudicated",
               "successful_audit": false,
@@ -588,14 +588,14 @@
       },
       "dataset_hash": "12f24262b41ed8c17a04680f0da393e2e9d4a3be111197b889bdb4e419f68951",
       "manifest_sha256": "793bc9b7de9caf0873a751e59fc7483d2ed20afe3d3a27ca4ace418aabc5237e",
-      "created_at": "2026-11-06T17:49:38.713865+00:00",
+      "created_at": "2026-11-13T00:19:03.552974+00:00",
       "stages": {
         "analyst": {
           "stage": "analyst",
           "status": "malformed",
           "raw_sha256": "b6d0680008f2305a7bee34f6b585da3365d3a65b6b13fd5eaf7d99784c2b9269",
           "parents": {},
-          "captured_at": "2026-11-06T17:49:38.714968+00:00",
+          "captured_at": "2026-11-13T00:19:03.555344+00:00",
           "operator_note": "Constructed fixture, not measured work",
           "elapsed_seconds": null,
           "interactions": null,
@@ -678,14 +678,14 @@
       },
       "dataset_hash": "313eb1beb27d52268494bb9a86977fb54ff83f3895c9688124b2ce1e00c4c84b",
       "manifest_sha256": "c41a1b40d607ceaefcd665d3c94ee262bc1f12c1c73595805bc984d22aa389e8",
-      "created_at": "2026-11-06T17:49:38.717592+00:00",
+      "created_at": "2026-11-13T00:19:03.556624+00:00",
       "stages": {
         "analyst": {
           "stage": "analyst",
           "status": "completed",
           "raw_sha256": "116e685aea031b5e13ed386ec8f585d166dcd9d163f8e881f8f73e9ccf893c77",
           "parents": {},
-          "captured_at": "2026-11-06T17:49:38.719079+00:00",
+          "captured_at": "2026-11-13T00:19:03.557615+00:00",
           "operator_note": "Constructed fixture, not measured work",
           "elapsed_seconds": null,
           "interactions": null,
@@ -697,7 +697,7 @@
           },
           "grading": {
             "grade": {
-              "grader_version": "0.2.0",
+              "grader_version": "0.2.1",
               "case_id": "dev-004",
               "status": "adjudicated",
               "successful_audit": true,

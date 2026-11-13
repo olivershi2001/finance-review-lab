@@ -8,7 +8,19 @@ import ast
 import math
 import re
 
-VERSION = '0.2.0'
+VERSION = '0.2.1'
+
+
+def normalize_location(location, default_sheet):
+    """Compare scalar Excel addresses without changing the captured answer."""
+    match = re.fullmatch(r"(?:('(?:[^']|'')+'|[^'!]+)!)?(\$?[A-Za-z]{1,3}\$?[1-9][0-9]*)", location.strip())
+    if not match:
+        return (None, location)
+    sheet, cell = match.groups()
+    sheet = (sheet or default_sheet).strip()
+    if sheet.startswith("'") and sheet.endswith("'"):
+        sheet = sheet[1:-1].replace("''", "'")
+    return sheet.casefold(), cell.replace('$', '').upper()
 
 
 class NeedsReview(ValueError):
@@ -184,7 +196,7 @@ def grade_submission(response, manifest, adjudication=None):
             numeric_checks = (_close(finding.get('correct_value', finding.get('correct_fcf')), impact.get('correct_value'), tolerance),
                               _close(finding.get('original_minus_correct', finding.get('original_minus_correct_fcf')), impact.get('original_minus_correct'), tolerance))
             nums = all(numeric_checks)
-            prop = set(finding.get('downstream_cells', [])) == set(error.get('downstream_cells', []))
+            prop = {normalize_location(x,error['sheet']) for x in finding.get('downstream_cells', [])} == {normalize_location(x,error['sheet']) for x in error.get('downstream_cells', [])}
             candidates.append((repair, nums, prop, numeric_checks))
             record['formula_evidence'].append(evidence)
         record['repair'] = all(c[0] is True for c in candidates) if candidates else False

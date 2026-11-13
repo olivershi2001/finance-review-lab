@@ -2,6 +2,8 @@
 
 Python 3.10+ is sufficient for evaluation management, grading and verification. No API key or external service is used by these commands. Run from the repository root.
 
+After a grader update, `python3 -m frl grade RUN STAGE --regrade` explicitly preserves the old grade and adds a new revision using the captured answer and existing adjudication, if any. It does not rerun a model or finalize pending human judgments. Record the software version change before comparing results across revisions.
+
 ## 1. Validate assets and export a blind package
 
 ```sh

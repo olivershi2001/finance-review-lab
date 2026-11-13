@@ -154,8 +154,12 @@ def grade(root, args):
     record = read(folder/'run.json')
     verify_inputs(folder, record)
     stage = folder/args.stage
-    if (stage/'grade.json').exists() and not args.adjudication:
-        raise ValueError('Existing grade preserved; provide adjudication for a new revision')
+    existing = read(stage/'grade.json') if (stage/'grade.json').exists() else None
+    regrade = getattr(args, 'regrade', False)
+    if existing and not args.adjudication and not regrade:
+        raise ValueError('Existing grade preserved; provide adjudication or explicitly --regrade')
+    if regrade and not existing:
+        raise ValueError('--regrade requires an existing grade revision')
     cap = read(stage/'capture.json')
     if args.stage == 'review':
         raise ValueError('Reviewer feedback is not a final audit')
@@ -166,7 +170,7 @@ def grade(root, args):
     manifest_path = root/'references'/record['case_id']/'manifest.json'
     if digest(manifest_path.read_bytes()) != record['manifest_sha256']:
         raise ValueError('Reference manifest changed since run initialization')
-    adjudication = read(args.adjudication) if args.adjudication else None
+    adjudication = read(args.adjudication) if args.adjudication else (existing.get('adjudication') if regrade else None)
     if cap['status'] == 'infrastructure_failure':
         result = {'status':'infrastructure_failure', 'successful_audit':None}
     elif cap['status'] != 'completed':
@@ -186,6 +190,8 @@ def grade(root, args):
     history.mkdir(exist_ok=True)
     revision = len(list(history.glob('*.json'))) + 1
     result['revision'] = revision
+    if regrade:
+        result['regraded_from_revision'] = existing['revision']
     dump(history/f'{revision:04d}.json', result, True)
     dump(stage/'grade.json', result)
     return result
@@ -219,7 +225,9 @@ def report(root, output):
                 if snapshot != historical or snapshot['raw_sha256'] != stage['raw_sha256'] or snapshot['manifest_sha256'] != item['manifest_sha256']:
                     raise ValueError('Grade integrity check failed')
                 if stage['status']=='completed':
-                    from .grading import grade_submission
+                    from .grading import grade_submission, VERSION
+                    if snapshot['grade'].get('grader_version') != VERSION:
+                        raise ValueError('Stored grade uses another grader version; explicitly --regrade each affected stage before exporting with '+VERSION)
                     from .review import validate_adjudication
                     adjudication=validate_adjudication(snapshot.get('adjudication'),stage.get('response'),read(manifest_path))
                     computed=grade_submission(stage.get('response'),read(manifest_path),adjudication=adjudication)
@@ -250,7 +258,7 @@ def main(argv=None):
     p=commands.add_parser('export');p.add_argument('case');p.add_argument('output')
     p=commands.add_parser('init');p.add_argument('run');p.add_argument('case');p.add_argument('--config',required=True);p.add_argument('--mode',choices=('development','simulated','evaluation'),default='development')
     p=commands.add_parser('import');p.add_argument('run');p.add_argument('stage',choices=STAGES);p.add_argument('--raw',required=True);p.add_argument('--response');p.add_argument('--status',choices=('completed','malformed','refused','incomplete','infrastructure_failure'),default='completed');p.add_argument('--note',default='');p.add_argument('--elapsed-seconds',type=float);p.add_argument('--interactions',type=int)
-    p=commands.add_parser('grade');p.add_argument('run');p.add_argument('stage',choices=STAGES);p.add_argument('--adjudication')
+    p=commands.add_parser('grade');p.add_argument('run');p.add_argument('stage',choices=STAGES);p.add_argument('--adjudication');p.add_argument('--regrade',action='store_true',help='Recompute with the current grader while preserving history and existing adjudication')
     p=commands.add_parser('report');p.add_argument('output')
     args=parser.parse_args(argv)
     try:

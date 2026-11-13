@@ -1,6 +1,6 @@
 # Build progress
 
-November 12, 2026. v0.2.0 source publication preparation. Model trials and human scoring remain pending. The November 6 native Excel evidence is retained with its original scope.
+November 12, 2026. Source published to GitHub; initial hosted checks passed. One real development smoke trial is captured locally and awaits human scoring. The November 6 native Excel evidence is retained with its original scope.
 
 | Milestone | State | Evidence |
 | --- | --- | --- |
@@ -12,7 +12,8 @@ November 12, 2026. v0.2.0 source publication preparation. Model trials and human
 | Pilot campaign | Implemented, not run | Balanced reproducible 24-trial planner, frozen configurations/prompts/packages, explicit planned/initialized/captured states |
 | Human review packets | Implemented, awaiting people | Metadata-blinded HTML and null decision worksheets; exact response/manifest binding enforced at import and report reproduction |
 | Results explorer | Implemented | Browser checked at a narrow desktop panel width; explicit simulated demo, filters, workflow separation, traces and evidence |
-| Blind model pilot | Not run | No genuinely access-isolated model evaluation established in this shared authoring environment |
+| Development smoke trial | Captured, provisional | Fresh ephemeral Codex session with restricted command access; reference-read canary blocked; human review pending; not a comparative campaign |
+| GitHub publication | Public | See github-publication.md for repository and initial hosted CI evidence |
 | Release documentation | Prepared | Run guide, provenance, authoring instructions, methodology, source archive utility and unpublished writing drafts |
 | Private evaluation | Infrastructure only | Empty-workspace utility and isolation checklist; no hidden tasks authored or scored |
 
@@ -28,4 +29,4 @@ Final command counts and release archive validation are recorded in completion-a
 
 ## Next substantive task
 
-Have a separate human review the development cases and run blind development trials in isolated chats/workspaces. A local Codex permission-profile canary permitted a test file and denied a neighboring file; that preliminary shell test does not establish complete model-session isolation. No candidate model was called. Freeze stopping rules and tool parity from the pilot. Then author the private evaluation set in an access-isolated workflow and run measured evaluations. Do not claim these public examples are unseen or create a real leaderboard from simulated records.
+Have a separate human review the development cases and first captured answer, then run the comparative development campaign. The preliminary command-access checks do not independently certify every model-session surface. The first real smoke test exposed a downstream-address normalization defect, now fixed in grader 0.2.1 with regression tests; both grading revisions and the original model response are preserved locally. Freeze stopping rules and tool parity before the comparative pilot. Then author the private evaluation set in an access-isolated workflow and run measured evaluations. Do not claim these public examples are unseen or create a real leaderboard from simulated records.
