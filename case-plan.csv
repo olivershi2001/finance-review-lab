@@ -1,0 +1,25 @@
+case_id,split,category,scenario,status
+case-001,public_dev,operating_cash_flow,Industrial distributor operating forecast,built_native_excel_baseline_checked
+dev-002,public_dev,debt_interest,Debt roll-forward and stated interest convention,built_native_excel_baseline_checked
+dev-003,public_dev,enterprise_equity,Enterprise to diluted per-share equity value,built_native_excel_baseline_checked
+dev-004,public_dev,clean_control,Clean operating forecast with explicit conventions,built_native_excel_baseline_checked
+eval-001,private_eval,operating_cash_flow,Operating forecast A,planned
+eval-002,private_eval,operating_cash_flow,Operating forecast B,planned
+eval-003,private_eval,operating_cash_flow,Operating forecast C,planned
+eval-004,private_eval,operating_cash_flow,Operating forecast D,planned
+eval-005,private_eval,operating_cash_flow,Operating forecast E,planned
+eval-006,private_eval,debt_interest,Debt schedule A,planned
+eval-007,private_eval,debt_interest,Debt schedule B,planned
+eval-008,private_eval,debt_interest,Debt schedule C,planned
+eval-009,private_eval,debt_interest,Debt schedule D,planned
+eval-010,private_eval,debt_interest,Debt schedule E,planned
+eval-011,private_eval,enterprise_equity,Valuation bridge A,planned
+eval-012,private_eval,enterprise_equity,Valuation bridge B,planned
+eval-013,private_eval,enterprise_equity,Valuation bridge C,planned
+eval-014,private_eval,enterprise_equity,Valuation bridge D,planned
+eval-015,private_eval,enterprise_equity,Valuation bridge E,planned
+eval-016,private_eval,forecast_integrity,Forecast schedule A,planned
+eval-017,private_eval,forecast_integrity,Forecast schedule B,planned
+eval-018,private_eval,forecast_integrity,Forecast schedule C,planned
+eval-019,private_eval,forecast_integrity,Forecast schedule D,planned
+eval-020,private_eval,forecast_integrity,Forecast schedule E,planned

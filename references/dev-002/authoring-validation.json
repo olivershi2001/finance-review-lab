@@ -1,0 +1,11 @@
+{
+  "engine": "OpenAI Artifact Tool",
+  "independent_numeric_outputs": 35,
+  "formula_error_scan": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}",
+  "perturbations": [
+    "Zero rate: zero interest and n.a. coverage",
+    "Lower principal repayment raises average debt interest"
+  ],
+  "native_excel_verified": false,
+  "visual_review": "pending"
+}

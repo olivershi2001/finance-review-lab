@@ -1,0 +1,21 @@
+{
+  "case_id": "dev-003",
+  "status": "passed",
+  "independent_decimal_outputs": 15,
+  "formula_changes": [
+    "Valuation!G21"
+  ],
+  "cached_outputs_changed": [
+    "Valuation!G21",
+    "Valuation!G24"
+  ],
+  "identical_styles": true,
+  "identical_inputs": true,
+  "acyclic": true,
+  "formula_error_scan": "no cached errors",
+  "print_and_panes_checked": true,
+  "native_excel_verified": false,
+  "visual_review": "recorded separately in suite QA log",
+  "reference_sha256": "df78bb2eb70b44866bfdbaadff4da3eff0c2b982eb866362d5b462e51c8a787c",
+  "model_sha256": "4827ad5c0c1a1d53ca73b93ff2f18e0d3368b0097b4ea772934532914dbb9356"
+}

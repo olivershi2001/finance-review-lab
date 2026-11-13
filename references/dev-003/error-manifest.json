@@ -1,0 +1,56 @@
+{
+  "case_id": "dev-003",
+  "errors": [
+    {
+      "id": "root-1",
+      "sheet": "Valuation",
+      "cell": "G21",
+      "diagnosis_required": "Excess cash subtracted rather than added in the enterprise-to-equity bridge.",
+      "accepted_formula": "=G11-G14-G15-G16+G17+G18",
+      "existing_formula": "=G11-SUM(G14:G16)-G17+G18",
+      "probes": [
+        {
+          "cells": {
+            "G11": 484.5,
+            "G14": 125,
+            "G15": 20,
+            "G16": 17,
+            "G17": 38,
+            "G18": 9
+          },
+          "expected": 369.5
+        },
+        {
+          "cells": {
+            "G11": 400,
+            "G14": 100,
+            "G15": 0,
+            "G16": 10,
+            "G17": 0,
+            "G18": 5
+          },
+          "expected": 295
+        },
+        {
+          "cells": {
+            "G11": 300,
+            "G14": 90,
+            "G15": 15,
+            "G16": 5,
+            "G17": 50,
+            "G18": 0
+          },
+          "expected": 240
+        }
+      ],
+      "impact": {
+        "correct_value": 369.5,
+        "original_minus_correct": -76,
+        "tolerance": 0.0001
+      },
+      "downstream_cells": [
+        "Valuation!G24"
+      ]
+    }
+  ]
+}

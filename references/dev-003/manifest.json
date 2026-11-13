@@ -1,0 +1,63 @@
+{
+  "case_id": "dev-003",
+  "version": "0.2.0",
+  "split": "public_dev",
+  "category": "enterprise_equity",
+  "source_type": "original_synthetic",
+  "units": "USD millions except explicitly labeled ratios and per-share values",
+  "errors": [
+    {
+      "id": "root-1",
+      "sheet": "Valuation",
+      "cell": "G21",
+      "diagnosis_required": "Excess cash subtracted rather than added in the enterprise-to-equity bridge.",
+      "accepted_formula": "=G11-G14-G15-G16+G17+G18",
+      "existing_formula": "=G11-SUM(G14:G16)-G17+G18",
+      "probes": [
+        {
+          "cells": {
+            "G11": 484.5,
+            "G14": 125,
+            "G15": 20,
+            "G16": 17,
+            "G17": 38,
+            "G18": 9
+          },
+          "expected": 369.5
+        },
+        {
+          "cells": {
+            "G11": 400,
+            "G14": 100,
+            "G15": 0,
+            "G16": 10,
+            "G17": 0,
+            "G18": 5
+          },
+          "expected": 295
+        },
+        {
+          "cells": {
+            "G11": 300,
+            "G14": 90,
+            "G15": 15,
+            "G16": 5,
+            "G17": 50,
+            "G18": 0
+          },
+          "expected": 240
+        }
+      ],
+      "impact": {
+        "correct_value": 369.5,
+        "original_minus_correct": -76,
+        "tolerance": 0.0001
+      },
+      "downstream_cells": [
+        "Valuation!G24"
+      ]
+    }
+  ],
+  "model_sha256": "4827ad5c0c1a1d53ca73b93ff2f18e0d3368b0097b4ea772934532914dbb9356",
+  "reference_sha256": "df78bb2eb70b44866bfdbaadff4da3eff0c2b982eb866362d5b462e51c8a787c"
+}

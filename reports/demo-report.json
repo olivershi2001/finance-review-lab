@@ -1,0 +1,761 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-11-06T17:49:38.723609+00:00",
+  "notice": "SIMULATED FIXTURES ONLY. No model calls or real human adjudications. Demonstrates successful, failed, helpful and harmful transitions.",
+  "runs": [
+    {
+      "run_id": "simulated-01",
+      "case_id": "case-001",
+      "mode": "simulated",
+      "case_version": "0.2.0",
+      "split": "public_dev",
+      "category": "operating_cash_flow",
+      "configuration": {
+        "model": "SIMULATED fixture; no model",
+        "product": "software test",
+        "date": "2026-11-05",
+        "settings": {
+          "fixture": true
+        },
+        "tool_access": [
+          "none"
+        ],
+        "attempt_cap": "Not applicable: constructed software fixtures",
+        "infrastructure_retry_policy": "Not applicable"
+      },
+      "dataset_hash": "20c869f33fb61a0bbcc96a5a1b92447a985032c3fb3ca0fecd170df5e3851559",
+      "manifest_sha256": "a91a2dc1a3b9e5b730756ce04aef78e61fec55dd8f689e80efd688937eefc0d3",
+      "created_at": "2026-11-06T17:49:38.700030+00:00",
+      "stages": {
+        "analyst": {
+          "stage": "analyst",
+          "status": "completed",
+          "raw_sha256": "116e685aea031b5e13ed386ec8f585d166dcd9d163f8e881f8f73e9ccf893c77",
+          "parents": {},
+          "captured_at": "2026-11-06T17:49:38.701402+00:00",
+          "operator_note": "Constructed fixture, not measured work",
+          "elapsed_seconds": null,
+          "interactions": null,
+          "response_sha256": "8aa973100a15bf817985395637131e838cf84e427be4792583def923f020f5fa",
+          "raw": "SIMULATED SUBMISSION \u2014 no model was evaluated.\n{\"findings\": []}",
+          "integrity_verified": true,
+          "response": {
+            "findings": []
+          },
+          "grading": {
+            "grade": {
+              "grader_version": "0.2.0",
+              "case_id": "case-001",
+              "status": "adjudicated",
+              "successful_audit": false,
+              "deterministic_pass": false,
+              "criteria": [
+                {
+                  "id": "root-1",
+                  "matched_findings": 0,
+                  "detection": true,
+                  "explanation": true,
+                  "repair": false,
+                  "numerical": false,
+                  "propagation": false,
+                  "formula_evidence": []
+                }
+              ],
+              "issues": [],
+              "metrics": {
+                "root_cause_recall": {
+                  "numerator": 0,
+                  "denominator": 1,
+                  "provisional": true
+                },
+                "finding_precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "provisional": true
+                },
+                "valid_repair_rate": {
+                  "numerator": 0,
+                  "denominator": 1
+                },
+                "numerical_impact_accuracy": {
+                  "numerator": 0,
+                  "denominator": 2
+                },
+                "propagation_accuracy": {
+                  "numerator": 0,
+                  "denominator": 1
+                },
+                "clean_case_pass": null
+              },
+              "pending_adjudication": [],
+              "restraint": true
+            },
+            "manifest_sha256": "a91a2dc1a3b9e5b730756ce04aef78e61fec55dd8f689e80efd688937eefc0d3",
+            "raw_sha256": "116e685aea031b5e13ed386ec8f585d166dcd9d163f8e881f8f73e9ccf893c77",
+            "human_adjudication_supplied": true,
+            "adjudication": {
+              "criteria": {
+                "restraint": {
+                  "verdict": true,
+                  "evidence": "SIMULATED adjudication fixture; not a real human review."
+                },
+                "detection:root-1": {
+                  "verdict": true,
+                  "evidence": "SIMULATED adjudication fixture asserting the reference diagnosis."
+                },
+                "explanation:root-1": {
+                  "verdict": true,
+                  "evidence": "SIMULATED adjudication fixture asserting the reference diagnosis."
+                }
+              }
+            },
+            "revision": 1
+          }
+        },
+        "self_review": {
+          "stage": "self_review",
+          "status": "completed",
+          "raw_sha256": "d8e5297661c1cd95e6523adf08edba941d6981ecc3537784a80c64d8e25da09d",
+          "parents": {
+            "analyst": "116e685aea031b5e13ed386ec8f585d166dcd9d163f8e881f8f73e9ccf893c77"
+          },
+          "captured_at": "2026-11-06T17:49:38.706280+00:00",
+          "operator_note": "Constructed fixture, not measured work",
+          "elapsed_seconds": null,
+          "interactions": null,
+          "response_sha256": "fa9746adfca11b16e36a3e6dd90411312829ae8ba1f13cc9294609cb58796d68",
+          "raw": "SIMULATED SUBMISSION \u2014 no model was evaluated.\n{\"findings\": [{\"sheet\": \"Operating Model\", \"cell\": \"I39\", \"diagnosis\": \"Increase in working capital is added instead of deducted.\", \"existing_formula\": \"=SUM(I35:I36)-I37+I38\", \"corrected_formula\": \"=I35+I36-I37-I38\", \"correct_value\": 15.428605499999996, \"original_minus_correct\": 4.72071600000001, \"downstream_cells\": [\"Operating Model!I40\", \"Operating Model!I42\", \"Operating Model!J42\", \"Operating Model!K42\", \"Operating Model!L42\"], \"explanation\": \"SIMULATED fixture using the public reference answer, not a model response.\"}]}",
+          "integrity_verified": true,
+          "response": {
+            "findings": [
+              {
+                "sheet": "Operating Model",
+                "cell": "I39",
+                "diagnosis": "Increase in working capital is added instead of deducted.",
+                "existing_formula": "=SUM(I35:I36)-I37+I38",
+                "corrected_formula": "=I35+I36-I37-I38",
+                "correct_value": 15.428605499999996,
+                "original_minus_correct": 4.72071600000001,
+                "downstream_cells": [
+                  "Operating Model!I40",
+                  "Operating Model!I42",
+                  "Operating Model!J42",
+                  "Operating Model!K42",
+                  "Operating Model!L42"
+                ],
+                "explanation": "SIMULATED fixture using the public reference answer, not a model response."
+              }
+            ]
+          },
+          "grading": {
+            "grade": {
+              "grader_version": "0.2.0",
+              "case_id": "case-001",
+              "status": "adjudicated",
+              "successful_audit": true,
+              "deterministic_pass": true,
+              "criteria": [
+                {
+                  "id": "root-1",
+                  "matched_findings": 1,
+                  "detection": true,
+                  "explanation": true,
+                  "repair": true,
+                  "numerical": true,
+                  "propagation": true,
+                  "formula_evidence": [
+                    [
+                      {
+                        "actual": 15.42860550000001,
+                        "expected": 15.428605499999996,
+                        "dependencies": [
+                          "I35",
+                          "I36",
+                          "I37",
+                          "I38"
+                        ]
+                      },
+                      {
+                        "actual": 11,
+                        "expected": 11,
+                        "dependencies": [
+                          "I35",
+                          "I36",
+                          "I37",
+                          "I38"
+                        ]
+                      },
+                      {
+                        "actual": 18,
+                        "expected": 18,
+                        "dependencies": [
+                          "I35",
+                          "I36",
+                          "I37",
+                          "I38"
+                        ]
+                      }
+                    ]
+                  ]
+                }
+              ],
+              "issues": [],
+              "metrics": {
+                "root_cause_recall": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "provisional": true
+                },
+                "finding_precision": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "provisional": true
+                },
+                "valid_repair_rate": {
+                  "numerator": 1,
+                  "denominator": 1
+                },
+                "numerical_impact_accuracy": {
+                  "numerator": 2,
+                  "denominator": 2
+                },
+                "propagation_accuracy": {
+                  "numerator": 1,
+                  "denominator": 1
+                },
+                "clean_case_pass": null
+              },
+              "pending_adjudication": [],
+              "restraint": true
+            },
+            "manifest_sha256": "a91a2dc1a3b9e5b730756ce04aef78e61fec55dd8f689e80efd688937eefc0d3",
+            "raw_sha256": "d8e5297661c1cd95e6523adf08edba941d6981ecc3537784a80c64d8e25da09d",
+            "human_adjudication_supplied": true,
+            "adjudication": {
+              "criteria": {
+                "restraint": {
+                  "verdict": true,
+                  "evidence": "SIMULATED adjudication fixture; not a real human review."
+                },
+                "detection:root-1": {
+                  "verdict": true,
+                  "evidence": "SIMULATED adjudication fixture asserting the reference diagnosis."
+                },
+                "explanation:root-1": {
+                  "verdict": true,
+                  "evidence": "SIMULATED adjudication fixture asserting the reference diagnosis."
+                }
+              }
+            },
+            "revision": 1
+          }
+        },
+        "review": {
+          "status": "missing"
+        },
+        "revision": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "run_id": "simulated-02",
+      "case_id": "dev-002",
+      "mode": "simulated",
+      "case_version": "0.2.0",
+      "split": "public_dev",
+      "category": "debt_interest",
+      "configuration": {
+        "model": "SIMULATED fixture; no model",
+        "product": "software test",
+        "date": "2026-11-05",
+        "settings": {
+          "fixture": true
+        },
+        "tool_access": [
+          "none"
+        ],
+        "attempt_cap": "Not applicable: constructed software fixtures",
+        "infrastructure_retry_policy": "Not applicable"
+      },
+      "dataset_hash": "e55cd22df4fcfc4926d3a454c5c60cd7f8e02d8f5f2f1bf313216a0bb64b1485",
+      "manifest_sha256": "090dd19cf9c6d5fff20e230b7466bdad0dc2eb71b66bf23d3a5e414d991d940b",
+      "created_at": "2026-11-06T17:49:38.708562+00:00",
+      "stages": {
+        "analyst": {
+          "stage": "analyst",
+          "status": "completed",
+          "raw_sha256": "e6d0eb99a3419aad5d99ad1a59dcd7d20adb893569e2aa73379d4cd424e5d3f2",
+          "parents": {},
+          "captured_at": "2026-11-06T17:49:38.709677+00:00",
+          "operator_note": "Constructed fixture, not measured work",
+          "elapsed_seconds": null,
+          "interactions": null,
+          "response_sha256": "ab2062ce63447bad3e64ad9eca3681f027cec97df031d641e01cf09cf9b88dc7",
+          "raw": "SIMULATED SUBMISSION \u2014 no model was evaluated.\n{\"findings\": [{\"sheet\": \"Debt Schedule\", \"cell\": \"G20\", \"diagnosis\": \"Opening debt used rather than the specified arithmetic average debt balance.\", \"existing_formula\": \"=G9*G19\", \"corrected_formula\": \"=G17*G19\", \"correct_value\": 10.35, \"original_minus_correct\": 1.8, \"downstream_cells\": [\"Debt Schedule!G22\", \"Debt Schedule!G24\", \"Debt Schedule!H24\", \"Debt Schedule!I24\"], \"explanation\": \"SIMULATED fixture using the public reference answer, not a model response.\"}]}",
+          "integrity_verified": true,
+          "response": {
+            "findings": [
+              {
+                "sheet": "Debt Schedule",
+                "cell": "G20",
+                "diagnosis": "Opening debt used rather than the specified arithmetic average debt balance.",
+                "existing_formula": "=G9*G19",
+                "corrected_formula": "=G17*G19",
+                "correct_value": 10.35,
+                "original_minus_correct": 1.8,
+                "downstream_cells": [
+                  "Debt Schedule!G22",
+                  "Debt Schedule!G24",
+                  "Debt Schedule!H24",
+                  "Debt Schedule!I24"
+                ],
+                "explanation": "SIMULATED fixture using the public reference answer, not a model response."
+              }
+            ]
+          },
+          "grading": {
+            "grade": {
+              "grader_version": "0.2.0",
+              "case_id": "dev-002",
+              "status": "adjudicated",
+              "successful_audit": true,
+              "deterministic_pass": true,
+              "criteria": [
+                {
+                  "id": "root-1",
+                  "matched_findings": 1,
+                  "detection": true,
+                  "explanation": true,
+                  "repair": true,
+                  "numerical": true,
+                  "propagation": true,
+                  "formula_evidence": [
+                    [
+                      {
+                        "actual": 10.35,
+                        "expected": 10.35,
+                        "dependencies": [
+                          "G17",
+                          "G19"
+                        ]
+                      },
+                      {
+                        "actual": 9.0,
+                        "expected": 9,
+                        "dependencies": [
+                          "G17",
+                          "G19"
+                        ]
+                      },
+                      {
+                        "actual": 10.0,
+                        "expected": 10,
+                        "dependencies": [
+                          "G17",
+                          "G19"
+                        ]
+                      }
+                    ]
+                  ]
+                }
+              ],
+              "issues": [],
+              "metrics": {
+                "root_cause_recall": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "provisional": true
+                },
+                "finding_precision": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "provisional": true
+                },
+                "valid_repair_rate": {
+                  "numerator": 1,
+                  "denominator": 1
+                },
+                "numerical_impact_accuracy": {
+                  "numerator": 2,
+                  "denominator": 2
+                },
+                "propagation_accuracy": {
+                  "numerator": 1,
+                  "denominator": 1
+                },
+                "clean_case_pass": null
+              },
+              "pending_adjudication": [],
+              "restraint": true
+            },
+            "manifest_sha256": "090dd19cf9c6d5fff20e230b7466bdad0dc2eb71b66bf23d3a5e414d991d940b",
+            "raw_sha256": "e6d0eb99a3419aad5d99ad1a59dcd7d20adb893569e2aa73379d4cd424e5d3f2",
+            "human_adjudication_supplied": true,
+            "adjudication": {
+              "criteria": {
+                "restraint": {
+                  "verdict": true,
+                  "evidence": "SIMULATED adjudication fixture; not a real human review."
+                },
+                "detection:root-1": {
+                  "verdict": true,
+                  "evidence": "SIMULATED adjudication fixture asserting the reference diagnosis."
+                },
+                "explanation:root-1": {
+                  "verdict": true,
+                  "evidence": "SIMULATED adjudication fixture asserting the reference diagnosis."
+                }
+              }
+            },
+            "revision": 1
+          }
+        },
+        "self_review": {
+          "status": "missing"
+        },
+        "review": {
+          "stage": "review",
+          "status": "completed",
+          "raw_sha256": "07ad53cdcc6925d5525be4df8b69babc40ac07263c0c7dd910f1ff8b3b32997e",
+          "parents": {
+            "analyst": "e6d0eb99a3419aad5d99ad1a59dcd7d20adb893569e2aa73379d4cd424e5d3f2"
+          },
+          "captured_at": "2026-11-06T17:49:38.711451+00:00",
+          "operator_note": "Constructed fixture, not measured work",
+          "elapsed_seconds": null,
+          "interactions": null,
+          "response_sha256": "8312b810e046a6609fff7b0e2fa375d1353e9b61ee03d848359655d487b5d035",
+          "raw": "SIMULATED SUBMISSION \u2014 no model was evaluated.\n{\"feedback\": \"SIMULATED bad advice: use opening rather than average debt.\"}",
+          "integrity_verified": true,
+          "response": {
+            "feedback": "SIMULATED bad advice: use opening rather than average debt."
+          }
+        },
+        "revision": {
+          "stage": "revision",
+          "status": "completed",
+          "raw_sha256": "9d5609f8033a31bf54cb20cb8572de69d6b3993508eedb8d9a43d25d3e3bb396",
+          "parents": {
+            "analyst": "e6d0eb99a3419aad5d99ad1a59dcd7d20adb893569e2aa73379d4cd424e5d3f2",
+            "review": "07ad53cdcc6925d5525be4df8b69babc40ac07263c0c7dd910f1ff8b3b32997e"
+          },
+          "captured_at": "2026-11-06T17:49:38.712290+00:00",
+          "operator_note": "Constructed fixture, not measured work",
+          "elapsed_seconds": null,
+          "interactions": null,
+          "response_sha256": "1803c2c5cc01eca6e4e7ec64a95eee5695725585fb311f3f177fb0ed80e38e38",
+          "raw": "SIMULATED SUBMISSION \u2014 no model was evaluated.\n{\"findings\": [{\"sheet\": \"Debt Schedule\", \"cell\": \"G20\", \"diagnosis\": \"Opening debt used rather than the specified arithmetic average debt balance.\", \"existing_formula\": \"=G9*G19\", \"corrected_formula\": \"=G9*G19\", \"correct_value\": 10.35, \"original_minus_correct\": 1.8, \"downstream_cells\": [\"Debt Schedule!G22\", \"Debt Schedule!G24\", \"Debt Schedule!H24\", \"Debt Schedule!I24\"], \"explanation\": \"SIMULATED fixture using the public reference answer, not a model response.\"}]}",
+          "integrity_verified": true,
+          "response": {
+            "findings": [
+              {
+                "sheet": "Debt Schedule",
+                "cell": "G20",
+                "diagnosis": "Opening debt used rather than the specified arithmetic average debt balance.",
+                "existing_formula": "=G9*G19",
+                "corrected_formula": "=G9*G19",
+                "correct_value": 10.35,
+                "original_minus_correct": 1.8,
+                "downstream_cells": [
+                  "Debt Schedule!G22",
+                  "Debt Schedule!G24",
+                  "Debt Schedule!H24",
+                  "Debt Schedule!I24"
+                ],
+                "explanation": "SIMULATED fixture using the public reference answer, not a model response."
+              }
+            ]
+          },
+          "grading": {
+            "grade": {
+              "grader_version": "0.2.0",
+              "case_id": "dev-002",
+              "status": "adjudicated",
+              "successful_audit": false,
+              "deterministic_pass": false,
+              "criteria": [
+                {
+                  "id": "root-1",
+                  "matched_findings": 1,
+                  "detection": true,
+                  "explanation": true,
+                  "repair": false,
+                  "numerical": true,
+                  "propagation": true,
+                  "formula_evidence": [
+                    [
+                      {
+                        "actual": 12.15,
+                        "expected": 10.35,
+                        "dependencies": [
+                          "G19",
+                          "G9"
+                        ]
+                      },
+                      {
+                        "actual": 9.0,
+                        "expected": 9,
+                        "dependencies": [
+                          "G19",
+                          "G9"
+                        ]
+                      },
+                      {
+                        "actual": 8.0,
+                        "expected": 10,
+                        "dependencies": [
+                          "G19",
+                          "G9"
+                        ]
+                      }
+                    ]
+                  ]
+                }
+              ],
+              "issues": [],
+              "metrics": {
+                "root_cause_recall": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "provisional": true
+                },
+                "finding_precision": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "provisional": true
+                },
+                "valid_repair_rate": {
+                  "numerator": 0,
+                  "denominator": 1
+                },
+                "numerical_impact_accuracy": {
+                  "numerator": 2,
+                  "denominator": 2
+                },
+                "propagation_accuracy": {
+                  "numerator": 1,
+                  "denominator": 1
+                },
+                "clean_case_pass": null
+              },
+              "pending_adjudication": [],
+              "restraint": true
+            },
+            "manifest_sha256": "090dd19cf9c6d5fff20e230b7466bdad0dc2eb71b66bf23d3a5e414d991d940b",
+            "raw_sha256": "9d5609f8033a31bf54cb20cb8572de69d6b3993508eedb8d9a43d25d3e3bb396",
+            "human_adjudication_supplied": true,
+            "adjudication": {
+              "criteria": {
+                "restraint": {
+                  "verdict": true,
+                  "evidence": "SIMULATED adjudication fixture; not a real human review."
+                },
+                "detection:root-1": {
+                  "verdict": true,
+                  "evidence": "SIMULATED adjudication fixture asserting the reference diagnosis."
+                },
+                "explanation:root-1": {
+                  "verdict": true,
+                  "evidence": "SIMULATED adjudication fixture asserting the reference diagnosis."
+                }
+              }
+            },
+            "revision": 1
+          }
+        }
+      }
+    },
+    {
+      "run_id": "simulated-03",
+      "case_id": "dev-003",
+      "mode": "simulated",
+      "case_version": "0.2.0",
+      "split": "public_dev",
+      "category": "enterprise_equity",
+      "configuration": {
+        "model": "SIMULATED fixture; no model",
+        "product": "software test",
+        "date": "2026-11-05",
+        "settings": {
+          "fixture": true
+        },
+        "tool_access": [
+          "none"
+        ],
+        "attempt_cap": "Not applicable: constructed software fixtures",
+        "infrastructure_retry_policy": "Not applicable"
+      },
+      "dataset_hash": "12f24262b41ed8c17a04680f0da393e2e9d4a3be111197b889bdb4e419f68951",
+      "manifest_sha256": "793bc9b7de9caf0873a751e59fc7483d2ed20afe3d3a27ca4ace418aabc5237e",
+      "created_at": "2026-11-06T17:49:38.713865+00:00",
+      "stages": {
+        "analyst": {
+          "stage": "analyst",
+          "status": "malformed",
+          "raw_sha256": "b6d0680008f2305a7bee34f6b585da3365d3a65b6b13fd5eaf7d99784c2b9269",
+          "parents": {},
+          "captured_at": "2026-11-06T17:49:38.714968+00:00",
+          "operator_note": "Constructed fixture, not measured work",
+          "elapsed_seconds": null,
+          "interactions": null,
+          "response_sha256": "e0044653f7344a894758aeab421aaf05457b37d0d9d427c3cd5b3be26c319e34",
+          "raw": "SIMULATED SUBMISSION \u2014 no model was evaluated.\n{\"text\": \"SIMULATED malformed audit response\"}",
+          "integrity_verified": true,
+          "response": {
+            "text": "SIMULATED malformed audit response"
+          },
+          "grading": {
+            "grade": {
+              "status": "adjudicated",
+              "successful_audit": false,
+              "deterministic_pass": false,
+              "metrics": {
+                "root_cause_recall": {
+                  "numerator": 0,
+                  "denominator": 1
+                },
+                "finding_precision": {
+                  "numerator": 0,
+                  "denominator": 0
+                },
+                "valid_repair_rate": {
+                  "numerator": 0,
+                  "denominator": 1
+                },
+                "numerical_impact_accuracy": {
+                  "numerator": 0,
+                  "denominator": 2
+                },
+                "propagation_accuracy": {
+                  "numerator": 0,
+                  "denominator": 1
+                },
+                "clean_case_pass": null
+              },
+              "issues": [
+                "Attempt ended with malformed"
+              ],
+              "capture_failure": "malformed"
+            },
+            "manifest_sha256": "793bc9b7de9caf0873a751e59fc7483d2ed20afe3d3a27ca4ace418aabc5237e",
+            "raw_sha256": "b6d0680008f2305a7bee34f6b585da3365d3a65b6b13fd5eaf7d99784c2b9269",
+            "human_adjudication_supplied": false,
+            "adjudication": null,
+            "revision": 1
+          }
+        },
+        "self_review": {
+          "status": "missing"
+        },
+        "review": {
+          "status": "missing"
+        },
+        "revision": {
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "run_id": "simulated-04",
+      "case_id": "dev-004",
+      "mode": "simulated",
+      "case_version": "0.2.0",
+      "split": "public_dev",
+      "category": "operating_cash_flow",
+      "configuration": {
+        "model": "SIMULATED fixture; no model",
+        "product": "software test",
+        "date": "2026-11-05",
+        "settings": {
+          "fixture": true
+        },
+        "tool_access": [
+          "none"
+        ],
+        "attempt_cap": "Not applicable: constructed software fixtures",
+        "infrastructure_retry_policy": "Not applicable"
+      },
+      "dataset_hash": "313eb1beb27d52268494bb9a86977fb54ff83f3895c9688124b2ce1e00c4c84b",
+      "manifest_sha256": "c41a1b40d607ceaefcd665d3c94ee262bc1f12c1c73595805bc984d22aa389e8",
+      "created_at": "2026-11-06T17:49:38.717592+00:00",
+      "stages": {
+        "analyst": {
+          "stage": "analyst",
+          "status": "completed",
+          "raw_sha256": "116e685aea031b5e13ed386ec8f585d166dcd9d163f8e881f8f73e9ccf893c77",
+          "parents": {},
+          "captured_at": "2026-11-06T17:49:38.719079+00:00",
+          "operator_note": "Constructed fixture, not measured work",
+          "elapsed_seconds": null,
+          "interactions": null,
+          "response_sha256": "8aa973100a15bf817985395637131e838cf84e427be4792583def923f020f5fa",
+          "raw": "SIMULATED SUBMISSION \u2014 no model was evaluated.\n{\"findings\": []}",
+          "integrity_verified": true,
+          "response": {
+            "findings": []
+          },
+          "grading": {
+            "grade": {
+              "grader_version": "0.2.0",
+              "case_id": "dev-004",
+              "status": "adjudicated",
+              "successful_audit": true,
+              "deterministic_pass": true,
+              "criteria": [],
+              "issues": [],
+              "metrics": {
+                "root_cause_recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "provisional": true
+                },
+                "finding_precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "provisional": true
+                },
+                "valid_repair_rate": {
+                  "numerator": 0,
+                  "denominator": 0
+                },
+                "numerical_impact_accuracy": {
+                  "numerator": 0,
+                  "denominator": 0
+                },
+                "propagation_accuracy": {
+                  "numerator": 0,
+                  "denominator": 0
+                },
+                "clean_case_pass": true
+              },
+              "pending_adjudication": [],
+              "restraint": true
+            },
+            "manifest_sha256": "c41a1b40d607ceaefcd665d3c94ee262bc1f12c1c73595805bc984d22aa389e8",
+            "raw_sha256": "116e685aea031b5e13ed386ec8f585d166dcd9d163f8e881f8f73e9ccf893c77",
+            "human_adjudication_supplied": true,
+            "adjudication": {
+              "criteria": {
+                "restraint": {
+                  "verdict": true,
+                  "evidence": "SIMULATED adjudication fixture; not a real human review."
+                }
+              }
+            },
+            "revision": 1
+          }
+        },
+        "self_review": {
+          "status": "missing"
+        },
+        "review": {
+          "status": "missing"
+        },
+        "revision": {
+          "status": "missing"
+        }
+      }
+    }
+  ]
+}

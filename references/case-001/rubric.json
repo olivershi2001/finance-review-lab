@@ -1,0 +1,63 @@
+{
+  "primary": "All root causes detected, valid live repairs, correct numerical impact, and no material false corrections.",
+  "human_review_required": [
+    "detection",
+    "explanation",
+    "restraint"
+  ],
+  "propagation": "Secondary; list precise downstream outputs and do not misclassify unaffected periods.",
+  "numeric_tolerance": 0.0001,
+  "formula_equivalence": "Base plus two perturbations; unsupported syntax needs evidenced human review.",
+  "errors": [
+    {
+      "id": "root-1",
+      "sheet": "Operating Model",
+      "cell": "I39",
+      "diagnosis_required": "Increase in working capital is added instead of deducted.",
+      "accepted_formula": "=I35+I36-I37-I38",
+      "existing_formula": "=SUM(I35:I36)-I37+I38",
+      "probes": [
+        {
+          "cells": {
+            "I35": 20.055073500000006,
+            "I36": 4.5322200000000015,
+            "I37": 6.798330000000002,
+            "I38": 2.360357999999998
+          },
+          "expected": 15.428605499999996
+        },
+        {
+          "cells": {
+            "I35": 10,
+            "I36": 2,
+            "I37": 4,
+            "I38": -3
+          },
+          "expected": 11
+        },
+        {
+          "cells": {
+            "I35": 22,
+            "I36": 4,
+            "I37": 8,
+            "I38": 0
+          },
+          "expected": 18
+        }
+      ],
+      "impact": {
+        "correct_value": 15.428605499999996,
+        "original_minus_correct": 4.72071600000001,
+        "tolerance": 0.0001
+      },
+      "downstream_cells": [
+        "Operating Model!I40",
+        "Operating Model!I42",
+        "Operating Model!J42",
+        "Operating Model!K42",
+        "Operating Model!L42"
+      ]
+    }
+  ],
+  "clean_case": false
+}

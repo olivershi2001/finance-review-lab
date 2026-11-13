@@ -1,0 +1,24 @@
+{
+  "case_id": "dev-002",
+  "status": "passed",
+  "independent_decimal_outputs": 35,
+  "formula_changes": [
+    "Debt Schedule!G20"
+  ],
+  "cached_outputs_changed": [
+    "Debt Schedule!G20",
+    "Debt Schedule!G22",
+    "Debt Schedule!G24",
+    "Debt Schedule!H24",
+    "Debt Schedule!I24"
+  ],
+  "identical_styles": true,
+  "identical_inputs": true,
+  "acyclic": true,
+  "formula_error_scan": "no cached errors",
+  "print_and_panes_checked": true,
+  "native_excel_verified": false,
+  "visual_review": "recorded separately in suite QA log",
+  "reference_sha256": "6be3859bd26d42f8b6aaec67f2cede3cfcc44ae6c1a504568b75b273ad0c3ead",
+  "model_sha256": "60aa67253e14ba938ca07079daf3d2677052475a198738d937e959e89b10ebae"
+}

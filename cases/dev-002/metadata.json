@@ -1,0 +1,8 @@
+{
+  "case_id": "dev-002",
+  "version": "0.2.0",
+  "split": "public_dev",
+  "category": "debt_interest",
+  "units": "USD millions except explicitly labeled ratios and per-share values",
+  "model_sha256": "60aa67253e14ba938ca07079daf3d2677052475a198738d937e959e89b10ebae"
+}

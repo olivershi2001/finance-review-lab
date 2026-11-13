@@ -1,0 +1,13 @@
+{
+  "primary": "All root causes detected, valid live repairs, correct numerical impact, and no material false corrections.",
+  "human_review_required": [
+    "detection",
+    "explanation",
+    "restraint"
+  ],
+  "propagation": "Secondary; list precise downstream outputs and do not misclassify unaffected periods.",
+  "numeric_tolerance": 0.0001,
+  "formula_equivalence": "Base plus two perturbations; unsupported syntax needs evidenced human review.",
+  "errors": [],
+  "clean_case": true
+}

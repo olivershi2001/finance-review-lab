@@ -1,0 +1,9 @@
+{
+  "criteria": {
+    "detection:root-1": {"verdict": false, "evidence": ""},
+    "explanation:root-1": {"verdict": false, "evidence": ""},
+    "restraint": {"verdict": false, "evidence": ""}
+  },
+  "reviewer": "Replace with actual human adjudicator",
+  "notes": "Fill verdicts and exact evidence after review. Empty evidence is intentionally insufficient. For a clean case only restraint applies."
+}

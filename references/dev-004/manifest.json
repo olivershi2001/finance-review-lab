@@ -1,0 +1,11 @@
+{
+  "case_id": "dev-004",
+  "version": "0.2.0",
+  "split": "public_dev",
+  "category": "operating_cash_flow",
+  "source_type": "original_synthetic",
+  "units": "USD millions except explicitly labeled ratios and per-share values",
+  "errors": [],
+  "model_sha256": "b2e52c4ac6172101caabfd4765eb46ca6a9111ddcd5476ff0124d5a403c0c97b",
+  "reference_sha256": "bd76d8929a94ede91a1bb1ea8aaf3889d0774b2eb8914a87929d26c3260f4084"
+}

@@ -1,0 +1,25 @@
+{
+  "case_id": "case-001",
+  "status": "passed",
+  "independent_decimal_outputs": 50,
+  "formula_changes": [
+    "Operating Model!I39"
+  ],
+  "cached_outputs_changed": [
+    "Operating Model!I39",
+    "Operating Model!I40",
+    "Operating Model!I42",
+    "Operating Model!J42",
+    "Operating Model!K42",
+    "Operating Model!L42"
+  ],
+  "identical_styles": true,
+  "identical_inputs": true,
+  "acyclic": true,
+  "formula_error_scan": "no cached errors",
+  "print_and_panes_checked": true,
+  "native_excel_verified": false,
+  "visual_review": "recorded separately in suite QA log",
+  "reference_sha256": "db89587ab8a7f2b717938579816e332db6390298a1dacf5471b03235915850cb",
+  "model_sha256": "0d8e3d28c5d64c65c5e8879794c295ffc5f3e10f448986dc5f0c8fa80e3aaf37"
+}

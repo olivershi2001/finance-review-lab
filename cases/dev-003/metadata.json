@@ -1,0 +1,8 @@
+{
+  "case_id": "dev-003",
+  "version": "0.2.0",
+  "split": "public_dev",
+  "category": "enterprise_equity",
+  "units": "USD millions except explicitly labeled ratios and per-share values",
+  "model_sha256": "4827ad5c0c1a1d53ca73b93ff2f18e0d3368b0097b4ea772934532914dbb9356"
+}

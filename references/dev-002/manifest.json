@@ -1,0 +1,60 @@
+{
+  "case_id": "dev-002",
+  "version": "0.2.0",
+  "split": "public_dev",
+  "category": "debt_interest",
+  "source_type": "original_synthetic",
+  "units": "USD millions except explicitly labeled ratios and per-share values",
+  "errors": [
+    {
+      "id": "root-1",
+      "sheet": "Debt Schedule",
+      "cell": "G20",
+      "diagnosis_required": "Opening debt used rather than the specified arithmetic average debt balance.",
+      "accepted_formula": "=G17*G19",
+      "existing_formula": "=G9*G19",
+      "probes": [
+        {
+          "cells": {
+            "G9": 135,
+            "G13": 95,
+            "G17": 115,
+            "G19": 0.09
+          },
+          "expected": 10.35
+        },
+        {
+          "cells": {
+            "G9": 150,
+            "G13": 150,
+            "G17": 150,
+            "G19": 0.06
+          },
+          "expected": 9
+        },
+        {
+          "cells": {
+            "G9": 80,
+            "G13": 120,
+            "G17": 100,
+            "G19": 0.1
+          },
+          "expected": 10
+        }
+      ],
+      "impact": {
+        "correct_value": 10.35,
+        "original_minus_correct": 1.8,
+        "tolerance": 0.0001
+      },
+      "downstream_cells": [
+        "Debt Schedule!G22",
+        "Debt Schedule!G24",
+        "Debt Schedule!H24",
+        "Debt Schedule!I24"
+      ]
+    }
+  ],
+  "model_sha256": "60aa67253e14ba938ca07079daf3d2677052475a198738d937e959e89b10ebae",
+  "reference_sha256": "6be3859bd26d42f8b6aaec67f2cede3cfcc44ae6c1a504568b75b273ad0c3ead"
+}

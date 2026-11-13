@@ -1,0 +1,9 @@
+{
+  "model": "REPLACE with the displayed model label",
+  "product": "REPLACE with ChatGPT or Codex",
+  "date": "2026-11-06",
+  "settings": {"reasoning": "unknown", "notes": "Record visible settings before running"},
+  "tool_access": ["REPLACE with actual tools and whether workbook formulas can be inspected"],
+  "attempt_cap": {"max_seconds": 1200, "max_interactions": 8},
+  "infrastructure_retry_policy": {"max_retries": 1, "only_confirmed_infrastructure": true}
+}

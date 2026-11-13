@@ -1,0 +1,16 @@
+{
+  "case_id": "dev-004",
+  "status": "passed",
+  "independent_decimal_outputs": 50,
+  "formula_changes": [],
+  "cached_outputs_changed": [],
+  "identical_styles": true,
+  "identical_inputs": true,
+  "acyclic": true,
+  "formula_error_scan": "no cached errors",
+  "print_and_panes_checked": true,
+  "native_excel_verified": false,
+  "visual_review": "recorded separately in suite QA log",
+  "reference_sha256": "bd76d8929a94ede91a1bb1ea8aaf3889d0774b2eb8914a87929d26c3260f4084",
+  "model_sha256": "b2e52c4ac6172101caabfd4765eb46ca6a9111ddcd5476ff0124d5a403c0c97b"
+}

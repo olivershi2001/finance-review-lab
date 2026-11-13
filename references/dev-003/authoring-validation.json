@@ -1,0 +1,11 @@
+{
+  "engine": "OpenAI Artifact Tool",
+  "independent_numeric_outputs": 15,
+  "formula_error_scan": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}",
+  "perturbations": [
+    "Zero cash: equity bridge responds correctly",
+    "Zero shares: per-share result unavailable rather than zero"
+  ],
+  "native_excel_verified": false,
+  "visual_review": "pending"
+}

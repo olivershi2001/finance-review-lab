@@ -1,0 +1,11 @@
+{
+  "engine": "OpenAI Artifact Tool",
+  "independent_numeric_outputs": 50,
+  "formula_error_scan": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}",
+  "perturbations": [
+    "Lower expansion capex increases FCF by the cash savings",
+    "Negative EBIT receives no tax benefit"
+  ],
+  "native_excel_verified": false,
+  "visual_review": "pending"
+}
